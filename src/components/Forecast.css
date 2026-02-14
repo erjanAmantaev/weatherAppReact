@@ -1,0 +1,141 @@
+.forecast-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.forecast-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+}
+
+.forecast-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e1e8ed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast-card:hover {
+  background: #ecf0f1;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.forecast-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.75rem;
+}
+
+.forecast-condition {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin: 0 0 1rem 0;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-temps {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.temp-max {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.temp-divider {
+  font-size: 1.25rem;
+  color: #bdc3c7;
+}
+
+.temp-min {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #7f8c8d;
+}
+
+.forecast-extra {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.extra-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+.extra-icon {
+  width: 16px;
+  height: 16px;
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .forecast-container {
+    padding: 1.5rem;
+  }
+
+  .forecast-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .forecast-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .forecast-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

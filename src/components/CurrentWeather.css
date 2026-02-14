@@ -1,0 +1,165 @@
+.current-weather {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.city-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.region {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin: 0.5rem 0;
+}
+
+.local-time {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin: 0.25rem 0;
+}
+
+.weather-main {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.temperature-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon-large {
+  width: 120px;
+  height: 120px;
+}
+
+.temperature-display {
+  display: flex;
+  align-items: flex-start;
+}
+
+.temperature {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+}
+
+.condition-text {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.feels-like {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.detail-card {
+  background: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e1e8ed;
+}
+
+.detail-card:hover {
+  background: #ecf0f1;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+  width: 24px;
+  height: 24px;
+  color: #3498db;
+  flex-shrink: 0;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin: 0 0 0.25rem 0;
+  font-weight: 400;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .current-weather {
+    padding: 1.5rem;
+  }
+
+  .city-name {
+    font-size: 2rem;
+  }
+
+  .temperature {
+    font-size: 4rem;
+  }
+
+  .weather-icon-large {
+    width: 80px;
+    height: 80px;
+  }
+
+  .weather-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
