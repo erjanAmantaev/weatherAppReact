@@ -1,5 +1,5 @@
 const API_KEY = '966351a78e8a493b867133659261402';
-const BASE_URL = 'http://api.weatherapi.com/v1';
+const BASE_URL = 'https://api.weatherapi.com/v1';
 
 export const weatherApi = {
   // Search for cities
